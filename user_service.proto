@@ -1,0 +1,18 @@
+syntax = "proto3"; // Версия protocol buffers
+
+package userservice; // определение пакета
+
+// Сообщение запроса
+message GetUserRequest {
+    string username = 1;
+}
+
+// Сообщение ответа
+message GetUserResponse {
+    string message = 1;
+}
+
+// gRPC-сервис
+service UserService {
+    rpc GetUser (GetUserRequest) returns (GetUserResponse); // метод gRPC-сервиса
+}
