@@ -2,8 +2,8 @@ import grpc
 
 from concurrent import futures
 
-import course_service_pb2
-import course_service_pb2_grpc
+import course_service_pb2, course_service_pb2_grpc
+
 
 class CourseServiceServicer(course_service_pb2_grpc.CourseServiceServicer):
     def GetCourse(self, request, context):

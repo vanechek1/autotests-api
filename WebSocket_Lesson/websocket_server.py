@@ -6,7 +6,7 @@ from websockets import ServerConnection
 async def echo(websocket: ServerConnection):
     async for message in websocket:
         print(f"Получено сообщение: {message}")
-        response = f"Сервел получил: {message}"
+        response = f"Сервер получил: {message}"
 
         for _ in range(5):
             await websocket.send(response)
