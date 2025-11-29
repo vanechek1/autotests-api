@@ -39,4 +39,4 @@ class AuthenticationClient(APIClient):
         :param request: Словарь с refreshToken.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.post("api/v1/authentication/refresh", json=request)
+        return self.post("/api/v1/authentication/refresh", json=request)
