@@ -51,7 +51,7 @@ class APIClient:
         """
         return self.client.patch(url, json=json)
 
-    def __delete__(self, url: URL | str) -> Response:
+    def delete(self, url: URL | str) -> Response:
         """
         Выполняет DELETE-запрос (удаление данных).
 
