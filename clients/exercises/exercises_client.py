@@ -4,7 +4,7 @@ from httpx import Response
 from typing import TypedDict
 
 
-class GetExercisesRequestDict(TypedDict):
+class GetExercisesQueryDict(TypedDict):
     """
     Описание структуры запроса на получение списка упражнений.
     """
@@ -40,7 +40,7 @@ class ExercisesClient(APIClient):
     """
     Клиент для работы с /api/v1/exercises
     """
-    def get_exercises_api(self, query: GetExercisesRequestDict) -> Response:
+    def get_exercises_api(self, query: GetExercisesQueryDict) -> Response:
         """
         Метод получения списка упражнений.
 
